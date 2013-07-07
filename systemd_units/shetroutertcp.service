@@ -1,0 +1,11 @@
+[Unit]
+Description=TCP SHET Router
+Requires=shetserv.service
+After=shetserv.service
+
+[Service]
+User=jobs
+ExecStart=/usr/bin/python2 /home/jobs/SHETSource/router/tcprouter.py
+
+[Install]
+WantedBy=multi-user.target

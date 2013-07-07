@@ -1,0 +1,11 @@
+[Unit]
+Description=SHET Lights
+Requires=shetserv.service
+After=shetserv.service
+
+[Service]
+User=jobs
+ExecStart=/usr/bin/python2 /home/jobs/SHETLights/lights_london.py
+
+[Install]
+WantedBy=multi-user.target

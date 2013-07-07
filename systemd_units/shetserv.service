@@ -1,0 +1,9 @@
+[Unit]
+Description=SHET Server
+
+[Service]
+User=jobs
+ExecStart=/home/jobs/.local/bin/shetserv
+
+[Install]
+WantedBy=multi-user.target
