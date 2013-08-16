@@ -59,10 +59,8 @@ def shetsource_tcp():
 
 @task
 def underground():
-    checkout("https://github.com/18sg/undergroundStatus.git",
-             "/home/jobs/undergroundStatus")
-    with cd("/home/jobs/undergroundStatus"):
-        sudo("python2 setup.py install --user")
+    randomshetclients()
+    systemd_unit("shetunderground")
 
 @task
 def shetlights():
