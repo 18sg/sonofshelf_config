@@ -1,0 +1,11 @@
+[Unit]
+Description=SHET client for monitoring the underground status
+Requires=shetserv.service
+After=shetserv.service
+
+[Service]
+User=jobs
+ExecStart=/usr/bin/python2 /home/jobs/Random-SHET-Clients/underground/underground.py
+
+[Install]
+WantedBy=multi-user.target
